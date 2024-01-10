@@ -2,8 +2,6 @@ package com.sms;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-
 @Entity
 @Table(name = "subscription_plans")
 public class SubscriptionPlan {
@@ -53,17 +51,5 @@ public class SubscriptionPlan {
 
     public void setDuration(int duration) {
         this.duration = duration;
-    }
-
-    public void setStartDate(LocalDate now) {
-    }
-
-    public void setSubscriptionPlan(SubscriptionPlan subscriptionPlan) {
-    }
-
-    public void setEndDate(LocalDate localDate) {
-    }
-
-    public void setUser(User user) {
     }
 }
