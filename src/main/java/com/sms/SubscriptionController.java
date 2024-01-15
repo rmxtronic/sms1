@@ -18,9 +18,11 @@ class SubscriptionController {
     private SubscriptionPlanRepository subscriptionRepository; // For user subscriptions
     private SubscriptionPlan subscription;
 
-    @GetMapping
-    public long getAllPlans() {
-        return subscriptionPlanManager.getTotalPlans();
+    @GetMapping("/")
+    public String getAllPlans() {
+
+        //return subscriptionPlanManager.getTotalPlans();
+        return "html";
     }
 
     @GetMapping("/{planId}")

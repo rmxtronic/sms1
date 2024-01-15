@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    margin: 40px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styles for individual plan cards, buttons, etc. */
