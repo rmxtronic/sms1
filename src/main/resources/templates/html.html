@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
     <title>Subscription Management</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css"> </head>
 <body>
-<h1>Subscription Plans</h1>
-<div class="plans-container">
-</div>
+<h1>Start Your Subscription</h1>
 
-<h2>Create Subscription</h2>
-<form id="create-subscription-form">
-    <button type="submit">Create Subscription</button>
+<form id="contact-form">
+    <fieldset>
+        <legend>Contact Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text"
+
+               id="fullname"
+
+               name="fullname"
+
+               required><br>
+
+
+        <label
+
+                for="email">Email:</label>
+
+
+        <input
+
+                type="email"
+
+                id="email"
+
+                name="email"
+
+                required><br>
+
+
+        <label
+
+                for="telephone">Telephone:</label>
+
+
+        <input
+
+                type="tel"
+
+                id="telephone"
+
+                name="telephone"
+
+                required><br>
+
+
+        <button
+
+                type="submit">Next</button>
+
+
+    </fieldset>
+
+
 </form>
 
-<script src="script.js"></script>
+<form id="payment-form" style="display: none;">
+    <fieldset>
+        <legend>Payment Information</legend>
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select><br>
+        <label for="months">Subscription Duration (Months):</label>
+        <input type="number" id="months" name="months" min="1" required><br>
+        <button type="submit">Subscribe</button>
+    </fieldset>
+</form>
+
+<script>
+    const contactForm = document.getElementById("contact-form");
+    const paymentForm = document.getElementById("payment-form");
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form submission
+        contactForm.style.display = "none";
+        paymentForm.style.display = "block";
+    });
+</script>
 </body>
 </html>
+
